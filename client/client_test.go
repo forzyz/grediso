@@ -7,6 +7,7 @@ import (
 	"testing"
 )
 
+
 func TestNewClient(t *testing.T) {
 	c, err := New("localhost:5001")
 	if err != nil {
