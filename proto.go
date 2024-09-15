@@ -22,7 +22,7 @@ type SetCommand struct {
 }
 
 type GetCommand struct {
-	key, val []byte
+	key []byte
 }
 
 func parseCommand(raw string) (Command, error) {
@@ -65,5 +65,5 @@ func parseCommand(raw string) (Command, error) {
 		}
 	}
 
-	return "foo", nil
+	return nil, fmt.Errorf("invalid command received: %s", raw)
 }
